@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import siteData from '../../siteData.mjs'
+
+const 
+  pageId = 'home',
+  pageMeta = siteData[pageId],
+  ldJSON = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@id': 'https://example.com/',
+        name: 'HOME'
+      }
+    }
+  ];
+
+---
+
+<Layout 
+  pageName={pageId}
+  title={pageMeta.title}
+  description={pageMeta.description}
+  ogpImage={pageMeta.ogpImage}
+  type={pageMeta.type}
+  path={pageMeta.path}
+  ldJSON={ldJSON}
+>
+	<main class="l-main p-front-page p-page">startify5</main>
+</Layout>

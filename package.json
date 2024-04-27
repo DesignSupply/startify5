@@ -1,0 +1,34 @@
+{
+  "name": "startify5",
+  "version": "0.0.0",
+  "description": "Development environment for website creation with design and static coding.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DesignSupply/startify5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DesignSupply/startify5/issues",
+    "email": "info@designsuply-web.com"
+  },
+  "author": {
+    "name": "Ogawa Shinya",
+    "email": "info@designsuply-web.com",
+    "url": "https://designsupply-web.com/"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.6.3",
+    "typescript": "^5.4.5"
+  } 
+}
