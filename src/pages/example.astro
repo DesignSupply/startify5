@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import siteData from '../../siteData.mjs'
+
+const 
+  pageId = 'example',
+  pageMeta = siteData[pageId],
+  ldJSON = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@id': 'https://example.com/',
+        name: 'HOME'
+      }
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@id': 'https://example.com/example.html',
+        name: 'テストページ'
+      }
+    }
+  ];
+
+---
+
+<Layout 
+  pageName={pageId}
+  title={pageMeta.title}
+  description={pageMeta.description}
+  ogpImage={pageMeta.ogpImage}
+  type={pageMeta.type}
+  path={pageMeta.path}
+  ldJSON={ldJSON}
+>
+	<main class="l-main p-page">テストページ</main>
+</Layout>
