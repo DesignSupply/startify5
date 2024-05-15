@@ -11,8 +11,8 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
-        dataLayer: false,
-      },
-    },
-  },
+        dataLayer: false
+      }
+    }
+  }
 ];

@@ -7,13 +7,13 @@ const config = {
   trailingComma: 'none',
   semi: true,
   arrowParens: 'always',
-  plugins: [ 'prettier-plugin-astro' ],
+  plugins: ['prettier-plugin-astro'],
   overrides: [
     {
       files: '**/*.astro',
-      options: { parser: 'astro' },
-    },
-  ],
+      options: { parser: 'astro' }
+    }
+  ]
 };
 
 export default config;

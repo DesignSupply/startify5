@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx,json,md,astro}' 'dist/**/*.html'"
+    "format": "prettier --ignore-path .prettierignore --write ."
   },
   "repository": {
     "type": "git",
