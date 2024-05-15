@@ -10,7 +10,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'"
+    "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'",
+    "format": "prettier --write 'src/**/*.{ts,tsx,json,md,astro}' 'dist/**/*.html'"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,11 @@
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.0",
-    "globals": "^15.2.0"
+    "globals": "^15.2.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",

@@ -3,7 +3,7 @@ import Head from '@/components/Head.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import OffCanvas from '@/components/OffCanvas.astro';
-import BodyScript from '@/components/BodyScript.astro'
+import BodyScript from '@/components/BodyScript.astro';
 import type { siteDataType } from '@/types/siteData';
 
 const siteData: siteDataType = {
@@ -19,23 +19,23 @@ const siteData: siteDataType = {
     '@context': 'http://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: Astro.props.ldJSON
-  },
-}
+  }
+};
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" data-theme="light">
-	<head>
-		<Head siteData={siteData} />
-	</head>
-	<body>
+  <head>
+    <Head siteData={siteData} />
+  </head>
+  <body>
     <noscript>※当ウェブサイトを快適に閲覧して頂くためjavascriptを有効にしてください</noscript>
     <div class="l-base">
       <Header />
       <slot />
       <Footer />
     </div>
-		<OffCanvas />
+    <OffCanvas />
     <BodyScript />
-	</body>
+  </body>
 </html>

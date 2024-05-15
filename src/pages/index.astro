@@ -1,9 +1,8 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import siteData from '../../siteData.mjs'
+import siteData from '../../siteData.mjs';
 
-const 
-  pageId = 'home',
+const pageId = 'home',
   pageMeta = siteData[pageId],
   ldJSON = [
     {
@@ -15,10 +14,9 @@ const
       }
     }
   ];
-
 ---
 
-<Layout 
+<Layout
   pageName={pageId}
   title={pageMeta.title}
   description={pageMeta.description}
@@ -27,11 +25,11 @@ const
   path={pageMeta.path}
   ldJSON={ldJSON}
 >
-	<main class="l-main p-front-page p-page">startify5</main>
+  <main class="l-main p-front-page p-page">startify5</main>
 </Layout>
 
 <style is:global>
-	html {
-		margin: 0;
-	}
+  html {
+    margin: 0;
+  }
 </style>

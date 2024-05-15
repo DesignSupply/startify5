@@ -8,15 +8,15 @@ export type siteDataType = {
   type: string;
   path: string;
   ldJSON: {
-    '@context': string,
-    '@type': string,
+    '@context': string;
+    '@type': string;
     itemListElement: {
-      '@type': string,
-      position: number,
+      '@type': string;
+      position: number;
       item: {
-        '@id': string,
-        name: string
-      }
-    }[]
+        '@id': string;
+        name: string;
+      };
+    }[];
   };
-}
+};

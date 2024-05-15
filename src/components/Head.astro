@@ -1,5 +1,5 @@
 ---
-import type { siteDataType } from "@/types/siteData";
+import type { siteDataType } from '@/types/siteData';
 
 const siteData: siteDataType = Astro.props.siteData;
 ---
@@ -28,8 +28,8 @@ const siteData: siteDataType = Astro.props.siteData;
 <meta name="theme-color" content="#000" />
 <meta name="generator" content={Astro.generator} />
 <link rel="manifest" href="./manifest.json" />
-<link rel="apple-touch-icon" href="">
-<link rel="icon" sizes="192x192" href="">
+<link rel="apple-touch-icon" href="" />
+<link rel="icon" sizes="192x192" href="" />
 <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 <!-- ページ個別メタデータ -->
 <meta property="og:title" content={siteData.title} />
@@ -43,4 +43,4 @@ const siteData: siteDataType = Astro.props.siteData;
 <meta name="description" content={siteData.description} />
 <link rel="canonical" href={`${siteData.siteUrl}${siteData.path}`} />
 <title>{siteData.title}</title>
-<script type="application/ld+json" set:html={JSON.stringify(siteData.ldJSON)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(siteData.ldJSON)} />

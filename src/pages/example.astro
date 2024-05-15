@@ -1,9 +1,8 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import siteData from '../../siteData.mjs'
+import siteData from '../../siteData.mjs';
 
-const 
-  pageId = 'example',
+const pageId = 'example',
   pageMeta = siteData[pageId],
   ldJSON = [
     {
@@ -23,10 +22,9 @@ const
       }
     }
   ];
-
 ---
 
-<Layout 
+<Layout
   pageName={pageId}
   title={pageMeta.title}
   description={pageMeta.description}
@@ -35,5 +33,5 @@ const
   path={pageMeta.path}
   ldJSON={ldJSON}
 >
-	<main class="l-main p-page">テストページ</main>
+  <main class="l-main p-page">テストページ</main>
 </Layout>
