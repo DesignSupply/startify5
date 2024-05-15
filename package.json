@@ -9,7 +9,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,15 @@
     "url": "https://designsupply-web.com/"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "globals": "^15.2.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "astro": "^4.6.3",
     "typescript": "^5.4.5"
-  } 
+  }
 }
