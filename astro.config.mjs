@@ -11,7 +11,8 @@ export default defineConfig({
   outDir: './dist',
   compressHTML: false,
   build: {
-    format: 'preserve'
+    format: 'preserve',
+    inlineStylesheets: 'never'
   },
   server: {
     port: 2000,
