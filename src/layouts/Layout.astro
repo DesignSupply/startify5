@@ -1,5 +1,4 @@
 ---
-import Head from '@/components/Head.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import OffCanvas from '@/components/OffCanvas.astro';
@@ -65,7 +64,7 @@ const siteData: siteDataType = {
     <meta name="description" content={siteData.description} />
     <link rel="canonical" href={`${siteData.siteUrl}${siteData.path}`} />
     <title>{siteData.title}</title>
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(siteData.ldJSON)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(siteData.ldJSON)} />
   </head>
   <body>
     <noscript>※当ウェブサイトを快適に閲覧して頂くためjavascriptを有効にしてください</noscript>
