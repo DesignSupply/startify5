@@ -10,6 +10,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "lint": "npm run lint:style && npm run lint:es && npm run lint:html",
     "lint:style": "stylelint 'src/**/*.{css,scss,astro,tsx}'",
     "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'",
     "lint:html": "markuplint 'src/**/*.{html,astro,tsx}'",
