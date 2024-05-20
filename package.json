@@ -12,6 +12,7 @@
     "astro": "astro",
     "lint:style": "stylelint 'src/**/*.{css,scss,astro,tsx}'",
     "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'",
+    "lint:html": "markuplint 'src/**/*.{html,astro,tsx}'",
     "format": "prettier --ignore-path .prettierignore --write ."
   },
   "repository": {
@@ -28,12 +29,16 @@
     "url": "https://designsupply-web.com/"
   },
   "devDependencies": {
+    "@markuplint/astro-parser": "^4.6.2",
+    "@markuplint/jsx-parser": "^4.7.2",
+    "@markuplint/react-spec": "^4.5.2",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.0",
     "globals": "^15.2.0",
+    "markuplint": "^4.8.1",
     "postcss-html": "^1.7.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
