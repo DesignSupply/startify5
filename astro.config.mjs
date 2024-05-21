@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: import.meta.env.MODE === 'production' ? 'https://example.com' : 'http://localhost:2000',
@@ -17,5 +18,6 @@ export default defineConfig({
   server: {
     port: 2000,
     open: true
-  }
+  },
+  integrations: [tailwind()]
 });

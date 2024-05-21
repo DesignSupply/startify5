@@ -4,5 +4,6 @@ module.exports = {
     require('css-declaration-sorter')({
       order: 'smacss'
     })
+    // require('tailwindcss'),
   ]
 };
