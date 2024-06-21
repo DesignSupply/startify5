@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
+// https://astro.build/config
 export default defineConfig({
   site: import.meta.env.MODE === 'production' ? 'https://example.com' : 'http://localhost:2000',
   base: '/',
@@ -19,5 +21,10 @@ export default defineConfig({
     port: 2000,
     open: true
   },
-  integrations: [tailwind()]
+  integrations: [
+    tailwind(),
+    react({
+      experimentalReactChildren: true
+    })
+  ]
 });

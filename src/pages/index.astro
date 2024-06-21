@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import siteData from '../../siteData.mjs';
+import AppReact from '@/components/react/AppReact.tsx';
 
 const pageId = 'home',
   pageMeta = siteData[pageId],
@@ -25,7 +26,10 @@ const pageId = 'home',
   path={pageMeta.path}
   ldJSON={ldJSON}
 >
-  <main class="l-main p-front-page p-page">startify5</main>
+  <main class="l-main p-front-page p-page">
+    <h1>startify5</h1>
+    <AppReact client:load />
+  </main>
 </Layout>
 
 <style lang="scss" is:global>
