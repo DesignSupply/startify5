@@ -3,10 +3,12 @@ export default {
   extends: ['markuplint:recommended'],
   parser: {
     '.astro$': '@markuplint/astro-parser',
-    '.tsx$': '@markuplint/jsx-parser'
+    '.tsx$': '@markuplint/jsx-parser',
+    '.vue$': '@markuplint/vue-parser'
   },
   specs: {
-    '.tsx$': '@markuplint/react-spec'
+    '.tsx$': '@markuplint/react-spec',
+    '.vue$': '@markuplint/vue-spec'
   },
   rules: {
     'character-reference': false,
