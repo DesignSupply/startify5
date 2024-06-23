@@ -6,7 +6,7 @@ export const useSomeStore = defineStore('someStore', {
     getMessage: (state) => state.message
   },
   actions: {
-    updateMessage(payload) {
+    updateMessage(payload: string) {
       this.message = payload;
     }
   }
