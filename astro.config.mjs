@@ -18,10 +18,7 @@ export default defineConfig({
     format: 'preserve',
     inlineStylesheets: 'never'
   },
-  server: {
-    port: 2000,
-    open: true
-  },
+  server: { open: true },
   integrations: [
     tailwind(),
     react({

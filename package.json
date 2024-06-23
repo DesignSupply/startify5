@@ -5,10 +5,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port 2000",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --port 8000",
     "astro": "astro",
     "lint": "npm run lint:style && npm run lint:es && npm run lint:html",
     "lint:style": "stylelint 'src/**/*.{css,scss,astro,vue}'",
