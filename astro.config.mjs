@@ -19,8 +19,31 @@ export default defineConfig({
     inlineStylesheets: 'never'
   },
   server: { open: true },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: 'assets/scripts/main.min.js',
+          // chunkFileNames: 'assets/scripts/main.min.js',
+          assetFileNames: (assetFile) => {
+            if(assetFile.name !== undefined) {
+              if(/\.css$/.test(assetFile.name)) {
+                return 'assets/stylesheets/style.min.[ext]';
+              } else if(/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetFile.name)) {
+                return 'assets/images/[name].min.[ext]';
+              } else if(/\.( ttf|otf|eot|woff|woff2| )$/.test(assetFile.name)) {
+                return 'assets/fonts/[name].[ext]';
+              } else {
+                return 'assets/[name].[ext]';
+              }
+            }
+          } 
+        }
+      }
+    }
+  },
   integrations: [
-    tailwind(),
+    // tailwind(),
     react({
       experimentalReactChildren: true,
       include: ['**/react/*']
