@@ -1,4 +1,4 @@
-@use "sass:math" as *;
+@use 'sass:math' as *;
 
 /* -------------------------------
  *  utility functions
@@ -6,55 +6,79 @@
 @function rem($target-px: 16, $root-font-size: 16) {
   @return div($target-px, $root-font-size) * 1rem;
 }
-@function responsive-font-size($target-font-size: 16 ,$target-screen-size: 1440) {
+@function responsive-font-size($target-font-size: 16, $target-screen-size: 1440) {
   @return div($target-font-size, div($target-screen-size, 100)) * 1vw;
 }
 @function column-width($columns: 12, $gap: 0) {
   $width: 100%;
   @if $columns == 1 {
-    @if $gap == 0 { $width: 8.3333%; }
-    @else { $width: calc(8.3333% - calc($gap / 2)); }
+    @if $gap == 0 {
+      $width: 8.3333%;
+    } @else {
+      $width: calc(8.3333% - calc($gap / 2));
+    }
+  } @else if $columns == 2 {
+    @if $gap == 0 {
+      $width: 16.6666%;
+    } @else {
+      $width: calc(16.6666% - calc($gap / 2));
+    }
+  } @else if $columns == 3 {
+    @if $gap == 0 {
+      $width: 25%;
+    } @else {
+      $width: calc(25% - calc($gap / 2));
+    }
+  } @else if $columns == 4 {
+    @if $gap == 0 {
+      $width: 33.3333%;
+    } @else {
+      $width: calc(33.3333% - calc($gap / 2));
+    }
+  } @else if $columns == 5 {
+    @if $gap == 0 {
+      $width: 41.6666%;
+    } @else {
+      $width: calc(41.6666% - calc($gap / 2));
+    }
+  } @else if $columns == 6 {
+    @if $gap == 0 {
+      $width: 50%;
+    } @else {
+      $width: calc(50% - calc($gap / 2));
+    }
+  } @else if $columns == 7 {
+    @if $gap == 0 {
+      $width: 58.3333%;
+    } @else {
+      $width: calc(58.3333% - calc($gap / 2));
+    }
+  } @else if $columns == 8 {
+    @if $gap == 0 {
+      $width: 66.6666%;
+    } @else {
+      $width: calc(66.6666% - calc($gap / 2));
+    }
+  } @else if $columns == 9 {
+    @if $gap == 0 {
+      $width: 75%;
+    } @else {
+      $width: calc(75% - calc($gap / 2));
+    }
+  } @else if $columns == 10 {
+    @if $gap == 0 {
+      $width: 83.3333%;
+    } @else {
+      $width: calc(83.3333% - calc($gap / 2));
+    }
+  } @else if $columns == 11 {
+    @if $gap == 0 {
+      $width: 91.6666%;
+    } @else {
+      $width: calc(91.6666% - calc($gap / 2));
+    }
+  } @else if $columns == 12 {
+    $width: 100%;
   }
-  @else if $columns == 2 {
-    @if $gap == 0 { $width: 16.6666%; }
-    @else { $width: calc(16.6666% - calc($gap / 2)); }
-  }
-  @else if $columns == 3 {
-    @if $gap == 0 { $width: 25%; }
-    @else { $width: calc(25% - calc($gap / 2)); }
-  }
-  @else if $columns == 4 {
-    @if $gap == 0 { $width: 33.3333%; }
-    @else { $width: calc(33.3333% - calc($gap / 2)); }
-  }
-  @else if $columns == 5 {
-    @if $gap == 0 { $width: 41.6666%; }
-    @else { $width: calc(41.6666% - calc($gap / 2)); }
-  }
-  @else if $columns == 6 {
-    @if $gap == 0 { $width: 50%; }
-    @else { $width: calc(50% - calc($gap / 2)); }
-  }
-  @else if $columns == 7 {
-    @if $gap == 0 { $width: 58.3333%; }
-    @else { $width: calc(58.3333% - calc($gap / 2)); }
-  }
-  @else if $columns == 8 {
-    @if $gap == 0 { $width: 66.6666%; }
-    @else { $width: calc(66.6666% - calc($gap / 2)); }
-  }
-  @else if $columns == 9 {
-    @if $gap == 0 { $width: 75%; }
-    @else { $width: calc(75% - calc($gap / 2)); }
-  }
-  @else if $columns == 10 {
-    @if $gap == 0 { $width: 83.3333%; }
-    @else { $width: calc(83.3333% - calc($gap / 2)); }
-  }
-  @else if $columns == 11 {
-    @if $gap == 0 { $width: 91.6666%; }
-    @else { $width: calc(91.6666% - calc($gap / 2)); }
-  }
-  @else if $columns == 12 { $width: 100%; }
   @return $width;
 }

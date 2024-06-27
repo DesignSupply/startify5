@@ -1,4 +1,4 @@
-@use "../../foundation/import" as *;
+@use '../../foundation/import' as *;
 
 /* -------------------------------
  *  flexbox layout
@@ -148,7 +148,7 @@
 
 /* -------------------------------
  *  grid layout
- * ---------------------------- */  
+ * ---------------------------- */
 .u-grid {
   display: grid;
 }
@@ -280,7 +280,7 @@
  * ---------------------------- */
 .u-static {
   position: static;
-} 
+}
 .u-absolute {
   position: absolute;
 }
@@ -299,26 +299,26 @@
  * ---------------------------- */
 .u-visible {
   visibility: visible;
-} 
+}
 .u-hidden {
   visibility: hidden;
-} 
+}
 .u-collapse {
   visibility: collapse;
-} 
+}
 
 /* -------------------------------
  *  opacity
  * ---------------------------- */
 .u-opacity-0 {
   opacity: 0;
-} 
+}
 .u-opacity-50 {
   opacity: 0.5;
-} 
+}
 .u-opacity-100 {
   opacity: 1;
-} 
+}
 
 /* -------------------------------
  *  sizing

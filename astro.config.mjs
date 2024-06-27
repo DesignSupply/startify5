@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import vue from '@astrojs/vue';
-import sitemap from "@astrojs/sitemap";
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +28,7 @@ export default defineConfig({
         output: {
           entryFileNames: 'assets/scripts/main.min.js',
           // chunkFileNames: 'assets/scripts/main.min.js',
-          assetFileNames: assetFile => {
+          assetFileNames: (assetFile) => {
             if (assetFile.name !== undefined) {
               if (/\.css$/.test(assetFile.name)) {
                 return 'assets/stylesheets/style.min.[ext]';
@@ -46,9 +46,12 @@ export default defineConfig({
     }
   },
   integrations: [
-  // tailwind(),
-  react({
-    experimentalReactChildren: true,
-    include: ['**/react/*']
-  }), vue({}), sitemap()]
+    tailwind(),
+    react({
+      experimentalReactChildren: true,
+      include: ['**/react/*']
+    }),
+    vue({}),
+    sitemap()
+  ]
 });

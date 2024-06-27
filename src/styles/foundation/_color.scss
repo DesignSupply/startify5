@@ -2,10 +2,10 @@
  *  color scheme
  * ---------------------------- */
 $base-color-list: (
-  1: #EFEFEF,
-  2: #DFDFDF,
-  3: #BFBFBF,
-  4: #7F7F7F,
+  1: #efefef,
+  2: #dfdfdf,
+  3: #bfbfbf,
+  4: #7f7f7f,
   5: #404040,
   6: #202020,
   7: #101010
@@ -14,42 +14,42 @@ $base-color-list: (
   @return #{map-get($base-color-list, $base-color-key)};
 }
 $primary-color-list: (
-  1: #DBFFFF,
-  2: #9AFFFF,
-  3: #5AFFFF,
-  4: #00C0C0,
+  1: #dbffff,
+  2: #9affff,
+  3: #5affff,
+  4: #00c0c0,
   5: #008888,
-  6: #004C4C,
+  6: #004c4c,
   7: #002929
 ) !default;
 @function primary-color($primary-color-key) {
   @return #{map-get($primary-color-list, $primary-color-key)};
 }
 $secondary-color-list: (
-  1: #FFFFC0,
-  2: #FFFF7F,
-  3: #F8F800,
-  4: #C7C700,
-  5: #7E7E00,
-  6: #4A4A00,
+  1: #ffffc0,
+  2: #ffff7f,
+  3: #f8f800,
+  4: #c7c700,
+  5: #7e7e00,
+  6: #4a4a00,
   7: #282800
 ) !default;
 @function secondary-color($secondary-color-key) {
   @return #{map-get($secondary-color-list, $secondary-color-key)};
 }
 $accent-color-list: (
-  1: #FFF0FF,
-  2: #FFBAFF,
-  3: #FF65FF,
-  4: #F000F0,
-  5: #B300B3,
+  1: #fff0ff,
+  2: #ffbaff,
+  3: #ff65ff,
+  4: #f000f0,
+  5: #b300b3,
   6: #690069,
-  7: #390039 
+  7: #390039
 ) !default;
 @function accent-color($accent-color-key) {
   @return #{map-get($accent-color-list, $accent-color-key)};
 }
-$color-white: #FFF !default;
+$color-white: #fff !default;
 $color-black: #000 !default;
 
 /* -------------------------------
@@ -57,7 +57,7 @@ $color-black: #000 !default;
  * ---------------------------- */
 @function linear-gradation-color($angle: 0deg, $start-color: white, $end-color: black) {
   @return linear-gradient($angle, $start-color 0%, $end-color 100%);
-}  
+}
 @function radial-gradation-color($start-color: white, $end-color: black, $option: circle farthest-corner at center) {
   @return radial-gradient($option, $start-color 0%, $end-color 100%);
 }
@@ -67,196 +67,196 @@ $color-black: #000 !default;
  * ---------------------------- */
 $palette-color-list: (
   red: (
-    0: #FEE2E2,
-    1: #FECACA,
-    2: #FCA5A5,
-    3: #F87171,
-    4: #EF4444,
-    5: #DC2626,
-    6: #B91C1C,
-    7: #991B1B,
-    8: #7F1D1D,
-    9: #450A0A
+    0: #fee2e2,
+    1: #fecaca,
+    2: #fca5a5,
+    3: #f87171,
+    4: #ef4444,
+    5: #dc2626,
+    6: #b91c1c,
+    7: #991b1b,
+    8: #7f1d1d,
+    9: #450a0a
   ),
   orange: (
-    0: #FFEDD5,
-    1: #FED7AA,
-    2: #FDBA74,
-    3: #FB923C,
-    4: #F97316,
-    5: #EA580C,
-    6: #C2410C,
-    7: #9A3412,
-    8: #7C2D12,
+    0: #ffedd5,
+    1: #fed7aa,
+    2: #fdba74,
+    3: #fb923c,
+    4: #f97316,
+    5: #ea580c,
+    6: #c2410c,
+    7: #9a3412,
+    8: #7c2d12,
     9: #431407
   ),
   amber: (
-    0: #FEF3C7,
-    1: #FDE68A,
-    2: #FCD34D,
-    3: #FBBF24,
-    4: #F59E0B,
-    5: #D97706,
-    6: #B45309,
-    7: #92400E,
-    8: #78350F,
-    9: #451A03
+    0: #fef3c7,
+    1: #fde68a,
+    2: #fcd34d,
+    3: #fbbf24,
+    4: #f59e0b,
+    5: #d97706,
+    6: #b45309,
+    7: #92400e,
+    8: #78350f,
+    9: #451a03
   ),
   yellow: (
-    0: #FEF9C3,
-    1: #FEF08A,
-    2: #FDE047,
-    3: #FACC15,
-    4: #EAB308,
-    5: #CA8A04,
-    6: #A16207,
-    7: #854D0E,
-    8: #713F12,
+    0: #fef9c3,
+    1: #fef08a,
+    2: #fde047,
+    3: #facc15,
+    4: #eab308,
+    5: #ca8a04,
+    6: #a16207,
+    7: #854d0e,
+    8: #713f12,
     9: #422006
   ),
   lime: (
-    0: #ECFCCB,
-    1: #D9F99D,
-    2: #BEF264,
-    3: #A3E635,
-    4: #84CC16,
-    5: #65A30D,
-    6: #4D7C0F,
-    7: #3F6212,
+    0: #ecfccb,
+    1: #d9f99d,
+    2: #bef264,
+    3: #a3e635,
+    4: #84cc16,
+    5: #65a30d,
+    6: #4d7c0f,
+    7: #3f6212,
     8: #365314,
-    9: #1A2E05
+    9: #1a2e05
   ),
   green: (
-    0: #DCFCE7,
-    1: #BBF7D0,
-    2: #86EFAC,
-    3: #4ADE80,
-    4: #22C55E,
-    5: #16A34A,
-    6: #15803D,
+    0: #dcfce7,
+    1: #bbf7d0,
+    2: #86efac,
+    3: #4ade80,
+    4: #22c55e,
+    5: #16a34a,
+    6: #15803d,
     7: #166534,
-    8: #14532D,
-    9: #052E16
+    8: #14532d,
+    9: #052e16
   ),
   emerald: (
-    0: #D1FAE5,
-    1: #A7F3D0,
-    2: #6EE7B7,
-    3: #34D399,
-    4: #10B981,
+    0: #d1fae5,
+    1: #a7f3d0,
+    2: #6ee7b7,
+    3: #34d399,
+    4: #10b981,
     5: #059669,
     6: #047857,
-    7: #065F46,
-    8: #064E3B,
-    9: #022C22
+    7: #065f46,
+    8: #064e3b,
+    9: #022c22
   ),
   teal: (
-    0: #CCFBF1,
-    1: #99F6E4,
-    2: #5EEAD4,
-    3: #2DD4BF,
-    4: #14B8A6,
-    5: #0D9488,
-    6: #0F766E,
-    7: #115E59,
-    8: #134E4A,
-    9: #042F2E
+    0: #ccfbf1,
+    1: #99f6e4,
+    2: #5eead4,
+    3: #2dd4bf,
+    4: #14b8a6,
+    5: #0d9488,
+    6: #0f766e,
+    7: #115e59,
+    8: #134e4a,
+    9: #042f2e
   ),
   sky: (
-    0: #E0F2FE,
-    1: #BAE6FD,
-    2: #7DD3FC,
-    3: #38BDF8,
-    4: #0EA5E9,
-    5: #0284C7,
-    6: #0369A1,
+    0: #e0f2fe,
+    1: #bae6fd,
+    2: #7dd3fc,
+    3: #38bdf8,
+    4: #0ea5e9,
+    5: #0284c7,
+    6: #0369a1,
     7: #075985,
-    8: #0C4A6E,
-    9: #082F49
+    8: #0c4a6e,
+    9: #082f49
   ),
   blue: (
-    0: #DBEAFE,
-    1: #BFDBFE,
-    2: #93C5FD,
-    3: #60A5FA,
-    4: #3B82F6,
-    5: #2563EB,
-    6: #1D4ED8,
-    7: #1E40AF,
-    8: #1E3A8A,
+    0: #dbeafe,
+    1: #bfdbfe,
+    2: #93c5fd,
+    3: #60a5fa,
+    4: #3b82f6,
+    5: #2563eb,
+    6: #1d4ed8,
+    7: #1e40af,
+    8: #1e3a8a,
     9: #172554
   ),
   indigo: (
-    0: #E0E7FF,
-    1: #C7D2FE,
-    2: #A5B4FC,
-    3: #818CF8,
-    4: #6366F1,
-    5: #4F46E5,
-    6: #4338CA,
-    7: #3730A3,
-    8: #312E81,
-    9: #1E1B4B
+    0: #e0e7ff,
+    1: #c7d2fe,
+    2: #a5b4fc,
+    3: #818cf8,
+    4: #6366f1,
+    5: #4f46e5,
+    6: #4338ca,
+    7: #3730a3,
+    8: #312e81,
+    9: #1e1b4b
   ),
   violet: (
-    0: #EDE9FE,
-    1: #DDD6FE,
-    2: #C4B5FD,
-    3: #A78BFA,
-    4: #8B5CF6,
-    5: #7C3AED,
-    6: #6D28D9,
-    7: #5B21B6,
-    8: #4C1D95,
-    9: #2E1065
+    0: #ede9fe,
+    1: #ddd6fe,
+    2: #c4b5fd,
+    3: #a78bfa,
+    4: #8b5cf6,
+    5: #7c3aed,
+    6: #6d28d9,
+    7: #5b21b6,
+    8: #4c1d95,
+    9: #2e1065
   ),
   purple: (
-    0: #F3E8FF,
-    1: #E9D5FF,
-    2: #D8B4FE,
-    3: #C084FC,
-    4: #A855F7,
-    5: #9333EA,
-    6: #7E22CE,
-    7: #6B21A8,
-    8: #581C87,
-    9: #3B0764
+    0: #f3e8ff,
+    1: #e9d5ff,
+    2: #d8b4fe,
+    3: #c084fc,
+    4: #a855f7,
+    5: #9333ea,
+    6: #7e22ce,
+    7: #6b21a8,
+    8: #581c87,
+    9: #3b0764
   ),
   fuchsia: (
-    0: #FAE8FF,
-    1: #F5D0FE,
-    2: #F0ABFC,
-    3: #E879F9,
-    4: #D946EF,
-    5: #C026D3,
-    6: #A21CAF,
-    7: #86198F,
-    8: #701A75,
-    9: #4A044E
+    0: #fae8ff,
+    1: #f5d0fe,
+    2: #f0abfc,
+    3: #e879f9,
+    4: #d946ef,
+    5: #c026d3,
+    6: #a21caf,
+    7: #86198f,
+    8: #701a75,
+    9: #4a044e
   ),
   pink: (
-    0: #FCE7F3,
-    1: #FBCFE8,
-    2: #F9A8D4,
-    3: #F472B6,
-    4: #EC4899,
-    5: #DB2777,
-    6: #BE185D,
-    7: #9D174D,
+    0: #fce7f3,
+    1: #fbcfe8,
+    2: #f9a8d4,
+    3: #f472b6,
+    4: #ec4899,
+    5: #db2777,
+    6: #be185d,
+    7: #9d174d,
     8: #831843,
     9: #500724
   ),
   rose: (
-    0: #FFE4E6,
-    1: #FECDD3,
-    2: #FDA4AF,
-    3: #FB7185,
-    4: #F43F5E,
-    5: #E11D48,
-    6: #BE123C,
-    7: #9F1239,
+    0: #ffe4e6,
+    1: #fecdd3,
+    2: #fda4af,
+    3: #fb7185,
+    4: #f43f5e,
+    5: #e11d48,
+    6: #be123c,
+    7: #9f1239,
     8: #881337,
-    9: #4C0519
+    9: #4c0519
   )
 ) !default;
 @function palette-color($palette-color-hue-key, $palette-color-tone-key) {
@@ -267,11 +267,11 @@ $palette-color-list: (
  *  UI color 
  * ---------------------------- */
 $ui-color-list: (
-  error: #B00,
-  warning: #DA0,
-  notice: #0CE,
-  success: #0C4,
-  negative: #AAA
+  error: #b00,
+  warning: #da0,
+  notice: #0ce,
+  success: #0c4,
+  negative: #aaa
 ) !default;
 @function ui-color($ui-color-key) {
   @return #{map-get($ui-color-list, $ui-color-key)};
@@ -281,9 +281,9 @@ $ui-color-list: (
  *  brands color
  * ---------------------------- */
 $brands-color-list: (
-  facebook: #1877F2,
+  facebook: #1877f2,
   twitter: #55acee,
-  instagram: #D93177,
+  instagram: #d93177,
   tumblr: #36465d,
   line: #00b900,
   hatena: #008fde,

@@ -1,4 +1,4 @@
-@use "variable" as *;
+@use 'variable' as *;
 
 /* -------------------------------
  *  typography
@@ -9,8 +9,7 @@
     line-height: $line-height-150;
     letter-spacing: $letter-spacing-2;
     font-weight: bold;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-4XL;
     line-height: $line-height-140;
     letter-spacing: $letter-spacing-4;
@@ -23,8 +22,7 @@
     line-height: $line-height-160;
     letter-spacing: $letter-spacing-2;
     font-weight: bold;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-3XL;
     line-height: $line-height-150;
     letter-spacing: $letter-spacing-2;
@@ -37,8 +35,7 @@
     line-height: $line-height-160;
     letter-spacing: $letter-spacing-1;
     font-weight: bold;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-2XL;
     line-height: $line-height-160;
     letter-spacing: $letter-spacing-2;
@@ -51,8 +48,7 @@
     line-height: $line-height-175;
     letter-spacing: $letter-spacing-1;
     font-weight: bold;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-XL;
     line-height: $line-height-160;
     letter-spacing: $letter-spacing-1;
@@ -65,8 +61,7 @@
     line-height: $line-height-175;
     letter-spacing: $letter-spacing-1;
     font-weight: bold;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: rem(22);
     line-height: $line-height-175;
     letter-spacing: $letter-spacing-1;
@@ -79,8 +74,7 @@
     line-height: $line-height-175;
     letter-spacing: $letter-spacing-1;
     font-weight: bold;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-L;
     line-height: $line-height-175;
     letter-spacing: $letter-spacing-1;
@@ -93,8 +87,7 @@
     line-height: $line-height-180;
     letter-spacing: $letter-spacing-0;
     font-weight: normal;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-R;
     line-height: $line-height-180;
     letter-spacing: $letter-spacing-0;
@@ -107,8 +100,7 @@
     line-height: $line-height-200;
     letter-spacing: $letter-spacing-0;
     font-weight: normal;
-  }
-  @else if $device == desktop {
+  } @else if $device == desktop {
     font-size: $font-XS;
     line-height: $line-height-200;
     letter-spacing: $letter-spacing-0;

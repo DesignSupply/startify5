@@ -1,4 +1,4 @@
-@use "../foundation/import" as *;
+@use '../foundation/import' as *;
 
 /* -------------------------------
  *  html body
@@ -16,7 +16,7 @@ html {
     line-height: var(--default-line-height);
     letter-spacing: var(--default-letter-spacing);
     color: var(--default-color);
-    font-feature-settings: "palt";
+    font-feature-settings: 'palt';
   }
   @include media-query(md) {
     body {
@@ -48,8 +48,8 @@ $footer-max-height: auto;
   position: relative;
   display: grid;
   grid-template:
-    "header" minmax($header-min-height, $header-max-height)
-    "main" 1fr
-    "footer" minmax($footer-min-height, $footer-max-height)
+    'header' minmax($header-min-height, $header-max-height)
+    'main' 1fr
+    'footer' minmax($footer-min-height, $footer-max-height)
     / 100%;
 }

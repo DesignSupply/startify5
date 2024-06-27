@@ -1,28 +1,28 @@
-@use "variable" as *;
+@use 'variable' as *;
 
 /* -------------------------------
  *  neumorphism style
  * ---------------------------- */
 @mixin neumorphism($direction: deboss) {
   @if $direction == emboss {
-    box-shadow: 
-      1px 1px 2px rgb(0 0 0 / 20%), 
-      4px 4px 10px rgb(0 0 0 / 15%), 
-      -1px -1px 1px rgb(255 255 255 / 80%), 
+    box-shadow:
+      1px 1px 2px rgb(0 0 0 / 20%),
+      4px 4px 10px rgb(0 0 0 / 15%),
+      -1px -1px 1px rgb(255 255 255 / 80%),
       -4px -4px 10px rgb(255 255 255 / 80%);
   } @else if $direction == deboss {
-    box-shadow: 
-      inset 1px 1px 2px rgb(0 0 0 / 20%), 
-      inset 4px 4px 6px rgb(0 0 0 / 15%), 
-      inset 0px 0px 1px rgb(189 189 189 / 75%), 
+    box-shadow:
+      inset 1px 1px 2px rgb(0 0 0 / 20%),
+      inset 4px 4px 6px rgb(0 0 0 / 15%),
+      inset 0px 0px 1px rgb(189 189 189 / 75%),
       inset -4px -4px 8px rgb(255 255 255 / 80%);
   }
 }
 
 @mixin neumorphism-typography {
-  text-shadow: 
-    1px 1px 2px rgb(0 0 0 / 20%), 
-    4px 4px 10px rgb(0 0 0 / 15%), 
-    -1px -1px 1px rgb(255 255 255 / 80%), 
+  text-shadow:
+    1px 1px 2px rgb(0 0 0 / 20%),
+    4px 4px 10px rgb(0 0 0 / 15%),
+    -1px -1px 1px rgb(255 255 255 / 80%),
     -4px -4px 10px rgb(255 255 255 / 80%);
 }

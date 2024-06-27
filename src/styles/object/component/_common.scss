@@ -1,4 +1,4 @@
-@use "../../foundation/import" as *;
+@use '../../foundation/import' as *;
 
 /* -------------------------------
  *  html elements
@@ -34,15 +34,15 @@ img {
 address {
   font-style: normal;
 }
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="time"],
-input[type="email"],
-input[type="tel"],
-input[type="url"],
-input[type="search"],
-input[type="password"],
+input[type='text'],
+input[type='number'],
+input[type='date'],
+input[type='time'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
 textarea {
   @extend %text-input-inline-default-style;
 }

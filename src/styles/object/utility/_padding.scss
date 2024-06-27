@@ -1,4 +1,4 @@
-@use "sass:math" as *;
+@use 'sass:math' as *;
 
 /* -------------------------------
  *  padding
@@ -10,56 +10,98 @@ $unit-16: 16 !default;
 $unit-32: 32 !default;
 
 /* -- class name -------------- */
-.u-pd-000 { padding: 0 !important; }
+.u-pd-000 {
+  padding: 0 !important;
+}
 @for $i from 0 through 10 {
   @if $i < 2 {
-    .u-pdl-00#{$i * $unit-8} { padding-left: #{$i * $unit-8}px !important; }
+    .u-pdl-00#{$i * $unit-8} {
+      padding-left: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 4 {
-    .u-pdl-0#{$i * $unit-8} { padding-left: #{$i * $unit-8}px !important; }
+    .u-pdl-0#{$i * $unit-8} {
+      padding-left: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 7 {
-    .u-pdl-0#{($i - 2) * $unit-16} { padding-left: #{($i - 2) * $unit-16}px !important; }
+    .u-pdl-0#{($i - 2) * $unit-16} {
+      padding-left: #{($i - 2) * $unit-16}px !important;
+    }
   } @else if $i < 8 {
-    .u-pdl-0#{($i - 4) * $unit-32} { padding-left: #{($i - 4) * $unit-32}px !important; }
+    .u-pdl-0#{($i - 4) * $unit-32} {
+      padding-left: #{($i - 4) * $unit-32}px !important;
+    }
   } @else if $i > 8 {
-    .u-pdl-#{($i - 5) * $unit-32} { padding-left: #{($i - 5) * $unit-32}px !important; }
+    .u-pdl-#{($i - 5) * $unit-32} {
+      padding-left: #{($i - 5) * $unit-32}px !important;
+    }
   }
 }
 @for $i from 0 through 10 {
   @if $i < 2 {
-    .u-pdr-00#{$i * $unit-8} { padding-right: #{$i * $unit-8}px !important; }
+    .u-pdr-00#{$i * $unit-8} {
+      padding-right: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 4 {
-    .u-pdr-0#{$i * $unit-8} { padding-right: #{$i * $unit-8}px !important; }
+    .u-pdr-0#{$i * $unit-8} {
+      padding-right: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 7 {
-    .u-pdr-0#{($i - 2) * $unit-16} { padding-right: #{($i - 2) * $unit-16}px !important; }
+    .u-pdr-0#{($i - 2) * $unit-16} {
+      padding-right: #{($i - 2) * $unit-16}px !important;
+    }
   } @else if $i < 8 {
-    .u-pdr-0#{($i - 4) * $unit-32} { padding-right: #{($i - 4) * $unit-32}px !important; }
+    .u-pdr-0#{($i - 4) * $unit-32} {
+      padding-right: #{($i - 4) * $unit-32}px !important;
+    }
   } @else if $i > 8 {
-    .u-pdr-#{($i - 5) * $unit-32} { padding-right: #{($i - 5) * $unit-32}px !important; }
+    .u-pdr-#{($i - 5) * $unit-32} {
+      padding-right: #{($i - 5) * $unit-32}px !important;
+    }
   }
 }
 @for $i from 0 through 10 {
   @if $i < 2 {
-    .u-pdt-00#{$i * $unit-8} { padding-top: #{$i * $unit-8}px !important; }
+    .u-pdt-00#{$i * $unit-8} {
+      padding-top: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 4 {
-    .u-pdt-0#{$i * $unit-8} { padding-top: #{$i * $unit-8}px !important; }
+    .u-pdt-0#{$i * $unit-8} {
+      padding-top: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 7 {
-    .u-pdt-0#{($i - 2) * $unit-16} { padding-top: #{($i - 2) * $unit-16}px !important; }
+    .u-pdt-0#{($i - 2) * $unit-16} {
+      padding-top: #{($i - 2) * $unit-16}px !important;
+    }
   } @else if $i < 8 {
-    .u-pdt-0#{($i - 4) * $unit-32} { padding-top: #{($i - 4) * $unit-32}px !important; }
+    .u-pdt-0#{($i - 4) * $unit-32} {
+      padding-top: #{($i - 4) * $unit-32}px !important;
+    }
   } @else if $i > 8 {
-    .u-pdt-#{($i - 5) * $unit-32} { padding-top: #{($i - 5) * $unit-32}px !important; }
+    .u-pdt-#{($i - 5) * $unit-32} {
+      padding-top: #{($i - 5) * $unit-32}px !important;
+    }
   }
 }
 @for $i from 0 through 10 {
   @if $i < 2 {
-    .u-pdb-00#{$i * $unit-8} { padding-bottom: #{$i * $unit-8}px !important; }
+    .u-pdb-00#{$i * $unit-8} {
+      padding-bottom: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 4 {
-    .u-pdb-0#{$i * $unit-8} { padding-bottom: #{$i * $unit-8}px !important; }
+    .u-pdb-0#{$i * $unit-8} {
+      padding-bottom: #{$i * $unit-8}px !important;
+    }
   } @else if $i < 7 {
-    .u-pdb-0#{($i - 2) * $unit-16} { padding-bottom: #{($i - 2) * $unit-16}px !important; }
+    .u-pdb-0#{($i - 2) * $unit-16} {
+      padding-bottom: #{($i - 2) * $unit-16}px !important;
+    }
   } @else if $i < 8 {
-    .u-pdb-0#{($i - 4) * $unit-32} { padding-bottom: #{($i - 4) * $unit-32}px !important; }
+    .u-pdb-0#{($i - 4) * $unit-32} {
+      padding-bottom: #{($i - 4) * $unit-32}px !important;
+    }
   } @else if $i > 8 {
-    .u-pdb-#{($i - 5) * $unit-32} { padding-bottom: #{($i - 5) * $unit-32}px !important; }
+    .u-pdb-#{($i - 5) * $unit-32} {
+      padding-bottom: #{($i - 5) * $unit-32}px !important;
+    }
   }
 }

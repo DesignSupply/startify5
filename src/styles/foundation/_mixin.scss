@@ -1,4 +1,4 @@
-@use "variable" as *;
+@use 'variable' as *;
 
 /* -------------------------------
  *  media query
@@ -7,7 +7,7 @@
   @if $rule == max-width {
     @media (max-width: #{map-get($breakpoint-list, $breakpoint-key)}px) {
       @content;
-    }  
+    }
   } @else if $rule == min-width {
     @media (min-width: calc(#{map-get($breakpoint-list, $breakpoint-key)}px + 1px)) {
       @content;
@@ -53,7 +53,7 @@
 
 /* -------------------------------
  *  screen reader
- * ---------------------------- */  
+ * ---------------------------- */
 @mixin screen-reader-style {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -63,10 +63,10 @@
 
 /* -------------------------------
  *  clearfix
- * ---------------------------- */  
+ * ---------------------------- */
 @mixin clearfix {
   &::after {
-    content: "";
+    content: '';
     clear: both;
     display: block;
   }
@@ -76,14 +76,15 @@
  *  hack
  * ---------------------------- */
 @mixin hack-ie11 {
-  @media all and (-ms-high-contrast:none) {
-    *::-ms-backdrop, body {
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop,
+    body {
       @content;
     }
   }
 }
 @mixin hack-edge {
-  @supports (-ms-ime-align:auto) {
+  @supports (-ms-ime-align: auto) {
     @content;
   }
 }
@@ -93,12 +94,14 @@
   }
 }
 @mixin hack-chrome {
-  @media screen and (-webkit-min-device-pixel-ratio:0) {
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @content;
   }
 }
-@mixin hack-safari($selecter: "*.hack-safari") {
-  _::-webkit-full-page-media, _:future, :root #{$selecter} {
+@mixin hack-safari($selecter: '*.hack-safari') {
+  _::-webkit-full-page-media,
+  _:future,
+  :root #{$selecter} {
     @content;
   }
 }
