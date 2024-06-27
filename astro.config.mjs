@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import vue from '@astrojs/vue';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,36 +19,36 @@ export default defineConfig({
     format: 'preserve',
     inlineStylesheets: 'never'
   },
-  server: { open: true },
+  server: {
+    open: true
+  },
   vite: {
     build: {
       rollupOptions: {
         output: {
           entryFileNames: 'assets/scripts/main.min.js',
           // chunkFileNames: 'assets/scripts/main.min.js',
-          assetFileNames: (assetFile) => {
-            if(assetFile.name !== undefined) {
-              if(/\.css$/.test(assetFile.name)) {
+          assetFileNames: assetFile => {
+            if (assetFile.name !== undefined) {
+              if (/\.css$/.test(assetFile.name)) {
                 return 'assets/stylesheets/style.min.[ext]';
-              } else if(/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetFile.name)) {
+              } else if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetFile.name)) {
                 return 'assets/images/[name].min.[ext]';
-              } else if(/\.( ttf|otf|eot|woff|woff2| )$/.test(assetFile.name)) {
+              } else if (/\.( ttf|otf|eot|woff|woff2| )$/.test(assetFile.name)) {
                 return 'assets/fonts/[name].[ext]';
               } else {
                 return 'assets/[name].[ext]';
               }
             }
-          } 
+          }
         }
       }
     }
   },
   integrations: [
-    // tailwind(),
-    react({
-      experimentalReactChildren: true,
-      include: ['**/react/*']
-    }),
-    vue({})
-  ]
+  // tailwind(),
+  react({
+    experimentalReactChildren: true,
+    include: ['**/react/*']
+  }), vue({}), sitemap()]
 });

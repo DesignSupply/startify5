@@ -8,13 +8,6 @@
     "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/strict",
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.astro",
-    "src/**/*.vue",
-  ],
-  "exclude": [
-    "src/env.d.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", "src/**/*.vue"],
+  "exclude": ["src/env.d.ts"]
 }

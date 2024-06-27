@@ -13,18 +13,14 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   eslintConfigPrettier,
   {
-    files: [
-      './src/**/*.tsx',
-      './src/**/*.ts',
-      './src/**/*.vue'
-    ],
+    files: ['./src/**/*.tsx', './src/**/*.ts', './src/**/*.vue'],
     languageOptions: {
       parser: typescriptEslintParser,
       parserOptions: {
         project: true,
-        sourceType: 'module',
-      },
-    },
+        sourceType: 'module'
+      }
+    }
   },
   {
     files: ['./src/**/*.astro'],
@@ -32,12 +28,12 @@ export default [
       globals: {
         ...globals.browser,
         dataLayer: false
-      },
+      }
     }
   },
   {
     rules: {
       'no-console': 'warn'
-    },
+    }
   }
 ];
