@@ -1,0 +1,126 @@
+@use "function" as *;
+
+/* -------------------------------
+ *  default style
+ * ---------------------------- */
+$default-color: #101010 !default;
+$default-font-size: rem(16) !default;
+$default-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Yu Gothic Medium", "Yu Gothic", YuGothic, Meiryo, sans-serif !default;
+$default-font-weight: normal !default;
+$default-line-height: 1.75 !default;
+$default-letter-spacing: rem(1) !default;
+$default-border-radius: 8px !default;
+$default-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s !default;
+$default-text-shadow: 2px 2px 8px rgb(0 0 0 / 50%) !default;
+$default-box-shadow: 0 2px 4px rgb(0 0 0 / 25%) !default;
+$default-box-shadow-inner: 0 0 8px rgb(0 0 0 / 25%) inset !default;
+
+/* -------------------------------
+ *  custom style
+ * ---------------------------- */
+$light-color: #7F7F7F !default;
+$hover-box-shadow: 0 0 16px rgb(0 0 0 / 15%) !default;
+
+/* -------------------------------
+ *  screen size & breakpoint
+ * ---------------------------- */
+$screen-2xl: 1440 !default;
+$screen-xl: 1280 !default;
+$screen-lg: 992 !default;
+$screen-md: 768 !default;
+$screen-sm: 544 !default;
+$screen-xs: 480 !default;
+$screen-2xs: 360 !default;
+$breakpoint-list: (
+  switch: #{$screen-md},
+  2xs: #{$screen-2xs},
+  xs: #{$screen-xs},
+  sm: #{$screen-sm},
+  md: #{$screen-md},
+  lg: #{$screen-lg},
+  xl: #{$screen-xl},
+  2xl: #{$screen-2xl}
+) !default;
+
+/* -------------------------------
+ *  font family
+ * ---------------------------- */
+$font-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Yu Gothic Medium", "Yu Gothic", YuGothic, Meiryo, sans-serif !default;
+$font-serif: "Times New Roman", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif !default;
+$font-monospace: SFMono, Consolas, "Roboto Mono", "Courier New", Courier, Meiryo, monospace !default;
+
+/* -------------------------------
+ *  space size
+ * ---------------------------- */
+$space-6XL: 240px !default;
+$space-5XL: 200px !default; 
+$space-4XL: 160px !default;
+$space-3XL: 128px !default;
+$space-2XL: 96px !default;
+$space-XL: 64px !default;
+$space-L: 48px !default;
+$space-M: 32px !default;
+$space-R: 24px !default;
+$space-S: 16px !default;
+$space-XS: 12px !default;
+$space-2XS: 8px !default;
+$space-3XS: 4px !default;
+$space-4XS: 2px !default;
+
+/* -------------------------------
+ *  font size
+ * ---------------------------- */
+$font-5XL: rem(52) !default;
+$font-4XL: rem(40) !default;
+$font-3XL: rem(32) !default;
+$font-2XL: rem(28) !default;
+$font-XL: rem(24) !default;
+$font-L: rem(20) !default;
+$font-M: rem(18) !default;
+$font-R: rem(16) !default;
+$font-S: rem(14) !default;
+$font-XS: rem(12) !default;
+$font-2XS: rem(10) !default;
+
+/* -------------------------------
+ *  line spacing
+ * ---------------------------- */
+$line-height-140: 1.4 !default;
+$line-height-150: 1.5 !default;
+$line-height-160: 1.6 !default;
+$line-height-175: 1.75 !default;
+$line-height-180: 1.8 !default;
+$line-height-200: 2 !default;
+
+/* -------------------------------
+ *  kerning
+ * ---------------------------- */
+$letter-spacing-0: 0 !default; 
+$letter-spacing-1: rem(1) !default;
+$letter-spacing-2: rem(2) !default;
+$letter-spacing-4: rem(4) !default;
+
+/* -------------------------------
+ *  layer order
+ * ---------------------------- */
+$layer-order-list: (
+  default: 100, 
+  alert: 200, 
+  drawer: 300, 
+  dialog: 400, 
+  loading: calc(infinity)
+) !default;
+@function layer-order($layer-order-key) {
+  @return #{map-get($layer-order-list, $layer-order-key)}
+}
+
+/* -------------------------------
+ *  directory path
+ * ---------------------------- */
+$directory-path-list: (
+  document-root: "/", 
+  images-directory: "assets/img/"
+) !default;
+@function directory-path($directory-path-key) {
+  @return #{map-get($directory-path-list, $directory-path-key)}
+}

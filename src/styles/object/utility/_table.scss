@@ -1,0 +1,16 @@
+@use "../../foundation/import" as *;
+
+/* -------------------------------
+ *  table components
+ * ---------------------------- */
+.u-table-wrap {
+  & > table {
+    width: 100%;
+  }
+  &.u-table-wrap--responsive {
+    overflow-x: auto;
+  }
+}
+.u-table-fixed {
+  table-layout: fixed;
+}

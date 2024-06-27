@@ -1,0 +1,117 @@
+@use "variable" as *;
+
+/* -------------------------------
+ *  typography
+ * ---------------------------- */
+@mixin heading-1($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-3XL;
+    line-height: $line-height-150;
+    letter-spacing: $letter-spacing-2;
+    font-weight: bold;
+  }
+  @else if $device == desktop {
+    font-size: $font-4XL;
+    line-height: $line-height-140;
+    letter-spacing: $letter-spacing-4;
+    font-weight: bold;
+  }
+}
+@mixin heading-2($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-2XL;
+    line-height: $line-height-160;
+    letter-spacing: $letter-spacing-2;
+    font-weight: bold;
+  }
+  @else if $device == desktop {
+    font-size: $font-3XL;
+    line-height: $line-height-150;
+    letter-spacing: $letter-spacing-2;
+    font-weight: bold;
+  }
+}
+@mixin heading-3($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-XL;
+    line-height: $line-height-160;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+  @else if $device == desktop {
+    font-size: $font-2XL;
+    line-height: $line-height-160;
+    letter-spacing: $letter-spacing-2;
+    font-weight: bold;
+  }
+}
+@mixin heading-4($device: desktop) {
+  @if $device == mobile {
+    font-size: rem(22);
+    line-height: $line-height-175;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+  @else if $device == desktop {
+    font-size: $font-XL;
+    line-height: $line-height-160;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+}
+@mixin heading-5($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-L;
+    line-height: $line-height-175;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+  @else if $device == desktop {
+    font-size: rem(22);
+    line-height: $line-height-175;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+}
+@mixin heading-6($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-M;
+    line-height: $line-height-175;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+  @else if $device == desktop {
+    font-size: $font-L;
+    line-height: $line-height-175;
+    letter-spacing: $letter-spacing-1;
+    font-weight: bold;
+  }
+}
+@mixin bodycopy($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-S;
+    line-height: $line-height-180;
+    letter-spacing: $letter-spacing-0;
+    font-weight: normal;
+  }
+  @else if $device == desktop {
+    font-size: $font-R;
+    line-height: $line-height-180;
+    letter-spacing: $letter-spacing-0;
+    font-weight: normal;
+  }
+}
+@mixin caption($device: desktop) {
+  @if $device == mobile {
+    font-size: $font-2XS;
+    line-height: $line-height-200;
+    letter-spacing: $letter-spacing-0;
+    font-weight: normal;
+  }
+  @else if $device == desktop {
+    font-size: $font-XS;
+    line-height: $line-height-200;
+    letter-spacing: $letter-spacing-0;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,52 @@
+@use "../../foundation/import" as *;
+
+/* -------------------------------
+ *  html elements
+ * ---------------------------- */
+noscript {
+  background: #ff0;
+  font-weight: bold;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+p:not(:first-child) {
+  margin-top: var(--space-S);
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+@include media-query(sm) {
+  p {
+    text-align: justify;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+textarea {
+  @extend %text-input-inline-default-style;
+}
+
+/* -------------------------------
+ *  other settings
+ * ---------------------------- */

@@ -1,0 +1,298 @@
+/* -------------------------------
+ *  color scheme
+ * ---------------------------- */
+$base-color-list: (
+  1: #EFEFEF,
+  2: #DFDFDF,
+  3: #BFBFBF,
+  4: #7F7F7F,
+  5: #404040,
+  6: #202020,
+  7: #101010
+) !default;
+@function base-color($base-color-key) {
+  @return #{map-get($base-color-list, $base-color-key)};
+}
+$primary-color-list: (
+  1: #DBFFFF,
+  2: #9AFFFF,
+  3: #5AFFFF,
+  4: #00C0C0,
+  5: #008888,
+  6: #004C4C,
+  7: #002929
+) !default;
+@function primary-color($primary-color-key) {
+  @return #{map-get($primary-color-list, $primary-color-key)};
+}
+$secondary-color-list: (
+  1: #FFFFC0,
+  2: #FFFF7F,
+  3: #F8F800,
+  4: #C7C700,
+  5: #7E7E00,
+  6: #4A4A00,
+  7: #282800
+) !default;
+@function secondary-color($secondary-color-key) {
+  @return #{map-get($secondary-color-list, $secondary-color-key)};
+}
+$accent-color-list: (
+  1: #FFF0FF,
+  2: #FFBAFF,
+  3: #FF65FF,
+  4: #F000F0,
+  5: #B300B3,
+  6: #690069,
+  7: #390039 
+) !default;
+@function accent-color($accent-color-key) {
+  @return #{map-get($accent-color-list, $accent-color-key)};
+}
+$color-white: #FFF !default;
+$color-black: #000 !default;
+
+/* -------------------------------
+ *  gradation color 
+ * ---------------------------- */
+@function linear-gradation-color($angle: 0deg, $start-color: white, $end-color: black) {
+  @return linear-gradient($angle, $start-color 0%, $end-color 100%);
+}  
+@function radial-gradation-color($start-color: white, $end-color: black, $option: circle farthest-corner at center) {
+  @return radial-gradient($option, $start-color 0%, $end-color 100%);
+}
+
+/* -------------------------------
+ *  palette color
+ * ---------------------------- */
+$palette-color-list: (
+  red: (
+    0: #FEE2E2,
+    1: #FECACA,
+    2: #FCA5A5,
+    3: #F87171,
+    4: #EF4444,
+    5: #DC2626,
+    6: #B91C1C,
+    7: #991B1B,
+    8: #7F1D1D,
+    9: #450A0A
+  ),
+  orange: (
+    0: #FFEDD5,
+    1: #FED7AA,
+    2: #FDBA74,
+    3: #FB923C,
+    4: #F97316,
+    5: #EA580C,
+    6: #C2410C,
+    7: #9A3412,
+    8: #7C2D12,
+    9: #431407
+  ),
+  amber: (
+    0: #FEF3C7,
+    1: #FDE68A,
+    2: #FCD34D,
+    3: #FBBF24,
+    4: #F59E0B,
+    5: #D97706,
+    6: #B45309,
+    7: #92400E,
+    8: #78350F,
+    9: #451A03
+  ),
+  yellow: (
+    0: #FEF9C3,
+    1: #FEF08A,
+    2: #FDE047,
+    3: #FACC15,
+    4: #EAB308,
+    5: #CA8A04,
+    6: #A16207,
+    7: #854D0E,
+    8: #713F12,
+    9: #422006
+  ),
+  lime: (
+    0: #ECFCCB,
+    1: #D9F99D,
+    2: #BEF264,
+    3: #A3E635,
+    4: #84CC16,
+    5: #65A30D,
+    6: #4D7C0F,
+    7: #3F6212,
+    8: #365314,
+    9: #1A2E05
+  ),
+  green: (
+    0: #DCFCE7,
+    1: #BBF7D0,
+    2: #86EFAC,
+    3: #4ADE80,
+    4: #22C55E,
+    5: #16A34A,
+    6: #15803D,
+    7: #166534,
+    8: #14532D,
+    9: #052E16
+  ),
+  emerald: (
+    0: #D1FAE5,
+    1: #A7F3D0,
+    2: #6EE7B7,
+    3: #34D399,
+    4: #10B981,
+    5: #059669,
+    6: #047857,
+    7: #065F46,
+    8: #064E3B,
+    9: #022C22
+  ),
+  teal: (
+    0: #CCFBF1,
+    1: #99F6E4,
+    2: #5EEAD4,
+    3: #2DD4BF,
+    4: #14B8A6,
+    5: #0D9488,
+    6: #0F766E,
+    7: #115E59,
+    8: #134E4A,
+    9: #042F2E
+  ),
+  sky: (
+    0: #E0F2FE,
+    1: #BAE6FD,
+    2: #7DD3FC,
+    3: #38BDF8,
+    4: #0EA5E9,
+    5: #0284C7,
+    6: #0369A1,
+    7: #075985,
+    8: #0C4A6E,
+    9: #082F49
+  ),
+  blue: (
+    0: #DBEAFE,
+    1: #BFDBFE,
+    2: #93C5FD,
+    3: #60A5FA,
+    4: #3B82F6,
+    5: #2563EB,
+    6: #1D4ED8,
+    7: #1E40AF,
+    8: #1E3A8A,
+    9: #172554
+  ),
+  indigo: (
+    0: #E0E7FF,
+    1: #C7D2FE,
+    2: #A5B4FC,
+    3: #818CF8,
+    4: #6366F1,
+    5: #4F46E5,
+    6: #4338CA,
+    7: #3730A3,
+    8: #312E81,
+    9: #1E1B4B
+  ),
+  violet: (
+    0: #EDE9FE,
+    1: #DDD6FE,
+    2: #C4B5FD,
+    3: #A78BFA,
+    4: #8B5CF6,
+    5: #7C3AED,
+    6: #6D28D9,
+    7: #5B21B6,
+    8: #4C1D95,
+    9: #2E1065
+  ),
+  purple: (
+    0: #F3E8FF,
+    1: #E9D5FF,
+    2: #D8B4FE,
+    3: #C084FC,
+    4: #A855F7,
+    5: #9333EA,
+    6: #7E22CE,
+    7: #6B21A8,
+    8: #581C87,
+    9: #3B0764
+  ),
+  fuchsia: (
+    0: #FAE8FF,
+    1: #F5D0FE,
+    2: #F0ABFC,
+    3: #E879F9,
+    4: #D946EF,
+    5: #C026D3,
+    6: #A21CAF,
+    7: #86198F,
+    8: #701A75,
+    9: #4A044E
+  ),
+  pink: (
+    0: #FCE7F3,
+    1: #FBCFE8,
+    2: #F9A8D4,
+    3: #F472B6,
+    4: #EC4899,
+    5: #DB2777,
+    6: #BE185D,
+    7: #9D174D,
+    8: #831843,
+    9: #500724
+  ),
+  rose: (
+    0: #FFE4E6,
+    1: #FECDD3,
+    2: #FDA4AF,
+    3: #FB7185,
+    4: #F43F5E,
+    5: #E11D48,
+    6: #BE123C,
+    7: #9F1239,
+    8: #881337,
+    9: #4C0519
+  )
+) !default;
+@function palette-color($palette-color-hue-key, $palette-color-tone-key) {
+  @return #{map-get(map-get($palette-color-list, $palette-color-hue-key), $palette-color-tone-key)};
+}
+
+/* -------------------------------
+ *  UI color 
+ * ---------------------------- */
+$ui-color-list: (
+  error: #B00,
+  warning: #DA0,
+  notice: #0CE,
+  success: #0C4,
+  negative: #AAA
+) !default;
+@function ui-color($ui-color-key) {
+  @return #{map-get($ui-color-list, $ui-color-key)};
+}
+
+/* -------------------------------
+ *  brands color
+ * ---------------------------- */
+$brands-color-list: (
+  facebook: #1877F2,
+  twitter: #55acee,
+  instagram: #D93177,
+  tumblr: #36465d,
+  line: #00b900,
+  hatena: #008fde,
+  youtube: #cd201f,
+  pinterest: #bd081c,
+  pocket: #dc3d50,
+  linkedin: #0079ba,
+  feedly: #6cc655
+) !default;
+@function brands-color($brands-color-key) {
+  @return #{map-get($brands-color-list, $brands-color-key)};
+}

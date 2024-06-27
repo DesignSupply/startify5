@@ -1,0 +1,65 @@
+@use "sass:math" as *;
+
+/* -------------------------------
+ *  margin
+ * ---------------------------- */
+
+/* -- config ------------------ */
+$unit-8: 8 !default;
+$unit-16: 16 !default;
+$unit-32: 32 !default;
+
+/* -- class name -------------- */
+.u-mg-000 { margin: 0 !important; }
+@for $i from 0 through 10 {
+  @if $i < 2 {
+    .u-mgl-00#{$i * $unit-8} { margin-left: #{$i * $unit-8}px !important; }
+  } @else if $i < 4 {
+    .u-mgl-0#{$i * $unit-8} { margin-left: #{$i * $unit-8}px !important; }
+  } @else if $i < 7 {
+    .u-mgl-0#{($i - 2) * $unit-16} { margin-left: #{($i - 2) * $unit-16}px !important; }
+  } @else if $i < 8 {
+    .u-mgl-0#{($i - 4) * $unit-32} { margin-left: #{($i - 4) * $unit-32}px !important; }
+  } @else if $i > 8 {
+    .u-mgl-#{($i - 5) * $unit-32} { margin-left: #{($i - 5) * $unit-32}px !important; }
+  }
+}
+@for $i from 0 through 10 {
+  @if $i < 2 {
+    .u-mgr-00#{$i * $unit-8} { margin-right: #{$i * $unit-8}px !important; }
+  } @else if $i < 4 {
+    .u-mgr-0#{$i * $unit-8} { margin-right: #{$i * $unit-8}px !important; }
+  } @else if $i < 7 {
+    .u-mgr-0#{($i - 2) * $unit-16} { margin-right: #{($i - 2) * $unit-16}px !important; }
+  } @else if $i < 8 {
+    .u-mgr-0#{($i - 4) * $unit-32} { margin-right: #{($i - 4) * $unit-32}px !important; }
+  } @else if $i > 8 {
+    .u-mgr-#{($i - 5) * $unit-32} { margin-right: #{($i - 5) * $unit-32}px !important; }
+  }
+}
+@for $i from 0 through 10 {
+  @if $i < 2 {
+    .u-mgt-00#{$i * $unit-8} { margin-top: #{$i * $unit-8}px !important; }
+  } @else if $i < 4 {
+    .u-mgt-0#{$i * $unit-8} { margin-top: #{$i * $unit-8}px !important; }
+  } @else if $i < 7 {
+    .u-mgt-0#{($i - 2) * $unit-16} { margin-top: #{($i - 2) * $unit-16}px !important; }
+  } @else if $i < 8 {
+    .u-mgt-0#{($i - 4) * $unit-32} { margin-top: #{($i - 4) * $unit-32}px !important; }
+  } @else if $i > 8 {
+    .u-mgt-#{($i - 5) * $unit-32} { margin-top: #{($i - 5) * $unit-32}px !important; }
+  }
+}
+@for $i from 0 through 10 {
+  @if $i < 2 {
+    .u-mgb-00#{$i * $unit-8} { margin-bottom: #{$i * $unit-8}px !important; }
+  } @else if $i < 4 {
+    .u-mgb-0#{$i * $unit-8} { margin-bottom: #{$i * $unit-8}px !important; }
+  } @else if $i < 7 {
+    .u-mgb-0#{($i - 2) * $unit-16} { margin-bottom: #{($i - 2) * $unit-16}px !important; }
+  } @else if $i < 8 {
+    .u-mgb-0#{($i - 4) * $unit-32} { margin-bottom: #{($i - 4) * $unit-32}px !important; }
+  } @else if $i > 8 {
+    .u-mgb-#{($i - 5) * $unit-32} { margin-bottom: #{($i - 5) * $unit-32}px !important; }
+  }
+}

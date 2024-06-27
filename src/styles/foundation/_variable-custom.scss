@@ -1,0 +1,380 @@
+@use "variable" as *;
+@use "mixin" as *;
+@use "color" as *;
+@use "animation" as *;
+
+/* -------------------------------
+ *  css custom properties
+ * ---------------------------- */
+:root {
+  // default style
+  --default-color: #{$default-color};
+  --default-font-size: #{$default-font-size};
+  --default-font-family: #{$default-font-family};
+  --default-font-weight: #{$default-font-weight};
+  --default-line-height: #{$default-line-height};
+  --default-letter-spacing: #{$default-letter-spacing};
+  --default-border-radius: #{$default-border-radius};
+  --default-transition: #{$default-transition};
+  --default-text-shadow: #{$default-text-shadow};
+  --default-box-shadow: #{$default-box-shadow};
+  --default-box-shadow-inner: #{$default-box-shadow-inner};
+  // custom style
+  --light-color: #{$light-color};
+  --hover-box-shadow: #{$hover-box-shadow};
+  // screen size & breakpoint
+  --screen-2xl: #{$screen-2xl};
+  --screen-xl: #{$screen-xl};
+  --screen-lg: #{$screen-lg};
+  --screen-md: #{$screen-md};
+  --screen-sm: #{$screen-sm};
+  --screen-xs: #{$screen-xs};
+  --screen-2xs: #{$screen-2xs};
+  // font family
+  --font-sans-serif: #{$font-sans-serif};
+  --font-serif: #{$font-serif};
+  --font-monospace: #{$font-monospace};
+  // space size
+  --space-6XL: #{$space-6XL};
+  --space-5XL: #{$space-5XL};
+  --space-4XL: #{$space-4XL};
+  --space-3XL: #{$space-3XL};
+  --space-2XL: #{$space-2XL};
+  --space-XL: #{$space-XL};
+  --space-L: #{$space-L};
+  --space-M: #{$space-M};
+  --space-R: #{$space-R};
+  --space-S: #{$space-S};
+  --space-XS: #{$space-XS};
+  --space-2XS: #{$space-2XS};
+  --space-3XS: #{$space-3XS};
+  --space-4XS: #{$space-4XS};
+  // font size
+  --font-5XL: #{$font-5XL};
+  --font-4XL: #{$font-4XL};
+  --font-3XL: #{$font-3XL};
+  --font-2XL: #{$font-2XL};
+  --font-XL: #{$font-XL};
+  --font-L: #{$font-L};
+  --font-M: #{$font-M};
+  --font-R: #{$font-R};
+  --font-S: #{$font-S};
+  --font-XS: #{$font-XS};
+  --font-2XS: #{$font-2XS};
+  // line spacing
+  --line-height-140: #{$line-height-140};
+  --line-height-150: #{$line-height-150};
+  --line-height-160: #{$line-height-160};
+  --line-height-175: #{$line-height-175};
+  --line-height-180: #{$line-height-180};
+  --line-height-200: #{$line-height-200};
+  // kerning
+  --letter-spacing-0: #{$letter-spacing-0};
+  --letter-spacing-1: #{$letter-spacing-1};
+  --letter-spacing-2: #{$letter-spacing-2};
+  --letter-spacing-4: #{$letter-spacing-4};
+  // layer order
+  --layer-order__default: #{layer-order(default)};
+  --layer-order__alert: #{layer-order(alert)};
+  --layer-order__drawer: #{layer-order(drawer)};
+  --layer-order__dialog: #{layer-order(dialog)};
+  --layer-order__loading: #{layer-order(loading)};
+  // directory path
+  --directory-path__document-root: #{directory-path(document-root)};
+  --directory-path__images-directory: #{directory-path(images-directory)};
+  // color scheme
+  --base-color__1: #{base-color(1)};
+  --base-color__2: #{base-color(2)};
+  --base-color__3: #{base-color(3)};
+  --base-color__4: #{base-color(4)};
+  --base-color__5: #{base-color(5)};
+  --base-color__6: #{base-color(6)};
+  --base-color__7: #{base-color(7)};
+  --primary-color__1: #{primary-color(1)};
+  --primary-color__2: #{primary-color(2)};
+  --primary-color__3: #{primary-color(3)};
+  --primary-color__4: #{primary-color(4)};
+  --primary-color__5: #{primary-color(5)};
+  --primary-color__6: #{primary-color(6)};
+  --primary-color__7: #{primary-color(7)};
+  --secondary-color__1: #{secondary-color(1)};
+  --secondary-color__2: #{secondary-color(2)};
+  --secondary-color__3: #{secondary-color(3)};
+  --secondary-color__4: #{secondary-color(4)};
+  --secondary-color__5: #{secondary-color(5)};
+  --secondary-color__6: #{secondary-color(6)};
+  --secondary-color__7: #{secondary-color(7)};
+  --accent-color__1: #{accent-color(1)};
+  --accent-color__2: #{accent-color(2)};
+  --accent-color__3: #{accent-color(3)};
+  --accent-color__4: #{accent-color(4)};
+  --accent-color__5: #{accent-color(5)};
+  --accent-color__6: #{accent-color(6)};
+  --accent-color__7: #{accent-color(7)};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  // palette color  
+  --palette-color__red--0: #{palette-color(red, 0)};
+  --palette-color__red--1: #{palette-color(red, 1)};
+  --palette-color__red--2: #{palette-color(red, 2)};
+  --palette-color__red--3: #{palette-color(red, 3)};
+  --palette-color__red--4: #{palette-color(red, 4)};
+  --palette-color__red--5: #{palette-color(red, 5)};
+  --palette-color__red--6: #{palette-color(red, 6)};
+  --palette-color__red--7: #{palette-color(red, 7)};
+  --palette-color__red--8: #{palette-color(red, 8)};
+  --palette-color__red--9: #{palette-color(red, 9)};
+  --palette-color__orange--0: #{palette-color(orange, 0)};
+  --palette-color__orange--1: #{palette-color(orange, 1)};
+  --palette-color__orange--2: #{palette-color(orange, 2)};
+  --palette-color__orange--3: #{palette-color(orange, 3)};
+  --palette-color__orange--4: #{palette-color(orange, 4)};
+  --palette-color__orange--5: #{palette-color(orange, 5)};
+  --palette-color__orange--6: #{palette-color(orange, 6)};
+  --palette-color__orange--7: #{palette-color(orange, 7)};
+  --palette-color__orange--8: #{palette-color(orange, 8)};
+  --palette-color__orange--9: #{palette-color(orange, 9)};
+  --palette-color__amber--0: #{palette-color(amber, 0)};
+  --palette-color__amber--1: #{palette-color(amber, 1)};
+  --palette-color__amber--2: #{palette-color(amber, 2)};
+  --palette-color__amber--3: #{palette-color(amber, 3)};
+  --palette-color__amber--4: #{palette-color(amber, 4)};
+  --palette-color__amber--5: #{palette-color(amber, 5)};
+  --palette-color__amber--6: #{palette-color(amber, 6)};
+  --palette-color__amber--7: #{palette-color(amber, 7)};
+  --palette-color__amber--8: #{palette-color(amber, 8)};
+  --palette-color__amber--9: #{palette-color(amber, 9)};
+  --palette-color__yellow--0: #{palette-color(yellow, 0)};
+  --palette-color__yellow--1: #{palette-color(yellow, 1)};
+  --palette-color__yellow--2: #{palette-color(yellow, 2)};
+  --palette-color__yellow--3: #{palette-color(yellow, 3)};
+  --palette-color__yellow--4: #{palette-color(yellow, 4)};
+  --palette-color__yellow--5: #{palette-color(yellow, 5)};
+  --palette-color__yellow--6: #{palette-color(yellow, 6)};
+  --palette-color__yellow--7: #{palette-color(yellow, 7)};
+  --palette-color__yellow--8: #{palette-color(yellow, 8)};
+  --palette-color__yellow--9: #{palette-color(yellow, 9)};
+  --palette-color__lime--0: #{palette-color(lime, 0)};
+  --palette-color__lime--1: #{palette-color(lime, 1)};
+  --palette-color__lime--2: #{palette-color(lime, 2)};
+  --palette-color__lime--3: #{palette-color(lime, 3)};
+  --palette-color__lime--4: #{palette-color(lime, 4)};
+  --palette-color__lime--5: #{palette-color(lime, 5)};
+  --palette-color__lime--6: #{palette-color(lime, 6)};
+  --palette-color__lime--7: #{palette-color(lime, 7)};
+  --palette-color__lime--8: #{palette-color(lime, 8)};
+  --palette-color__lime--9: #{palette-color(lime, 9)};
+  --palette-color__green--0: #{palette-color(green, 0)};
+  --palette-color__green--1: #{palette-color(green, 1)};
+  --palette-color__green--2: #{palette-color(green, 2)};
+  --palette-color__green--3: #{palette-color(green, 3)};
+  --palette-color__green--4: #{palette-color(green, 4)};
+  --palette-color__green--5: #{palette-color(green, 5)};
+  --palette-color__green--6: #{palette-color(green, 6)};
+  --palette-color__green--7: #{palette-color(green, 7)};
+  --palette-color__green--8: #{palette-color(green, 8)};
+  --palette-color__green--9: #{palette-color(green, 9)};
+  --palette-color__emerald--0: #{palette-color(emerald, 0)};
+  --palette-color__emerald--1: #{palette-color(emerald, 1)};
+  --palette-color__emerald--2: #{palette-color(emerald, 2)};
+  --palette-color__emerald--3: #{palette-color(emerald, 3)};
+  --palette-color__emerald--4: #{palette-color(emerald, 4)};
+  --palette-color__emerald--5: #{palette-color(emerald, 5)};
+  --palette-color__emerald--6: #{palette-color(emerald, 6)};
+  --palette-color__emerald--7: #{palette-color(emerald, 7)};
+  --palette-color__emerald--8: #{palette-color(emerald, 8)};
+  --palette-color__emerald--9: #{palette-color(emerald, 9)};
+  --palette-color__teal--0: #{palette-color(teal, 0)};
+  --palette-color__teal--1: #{palette-color(teal, 1)};
+  --palette-color__teal--2: #{palette-color(teal, 2)};
+  --palette-color__teal--3: #{palette-color(teal, 3)};
+  --palette-color__teal--4: #{palette-color(teal, 4)};
+  --palette-color__teal--5: #{palette-color(teal, 5)};
+  --palette-color__teal--6: #{palette-color(teal, 6)};
+  --palette-color__teal--7: #{palette-color(teal, 7)};
+  --palette-color__teal--8: #{palette-color(teal, 8)};
+  --palette-color__teal--9: #{palette-color(teal, 9)};
+  --palette-color__sky--0: #{palette-color(sky, 0)};
+  --palette-color__sky--1: #{palette-color(sky, 1)};
+  --palette-color__sky--2: #{palette-color(sky, 2)};
+  --palette-color__sky--3: #{palette-color(sky, 3)};
+  --palette-color__sky--4: #{palette-color(sky, 4)};
+  --palette-color__sky--5: #{palette-color(sky, 5)};
+  --palette-color__sky--6: #{palette-color(sky, 6)};
+  --palette-color__sky--7: #{palette-color(sky, 7)};
+  --palette-color__sky--8: #{palette-color(sky, 8)};
+  --palette-color__sky--9: #{palette-color(sky, 9)};
+  --palette-color__blue--0: #{palette-color(blue, 0)};
+  --palette-color__blue--1: #{palette-color(blue, 1)};
+  --palette-color__blue--2: #{palette-color(blue, 2)};
+  --palette-color__blue--3: #{palette-color(blue, 3)};
+  --palette-color__blue--4: #{palette-color(blue, 4)};
+  --palette-color__blue--5: #{palette-color(blue, 5)};
+  --palette-color__blue--6: #{palette-color(blue, 6)};
+  --palette-color__blue--7: #{palette-color(blue, 7)};
+  --palette-color__blue--8: #{palette-color(blue, 8)};
+  --palette-color__blue--9: #{palette-color(blue, 9)};
+  --palette-color__indigo--0: #{palette-color(indigo, 0)};
+  --palette-color__indigo--1: #{palette-color(indigo, 1)};
+  --palette-color__indigo--2: #{palette-color(indigo, 2)};
+  --palette-color__indigo--3: #{palette-color(indigo, 3)};
+  --palette-color__indigo--4: #{palette-color(indigo, 4)};
+  --palette-color__indigo--5: #{palette-color(indigo, 5)};
+  --palette-color__indigo--6: #{palette-color(indigo, 6)};
+  --palette-color__indigo--7: #{palette-color(indigo, 7)};
+  --palette-color__indigo--8: #{palette-color(indigo, 8)};
+  --palette-color__indigo--9: #{palette-color(indigo, 9)};
+  --palette-color__violet--0: #{palette-color(violet, 0)};
+  --palette-color__violet--1: #{palette-color(violet, 1)};
+  --palette-color__violet--2: #{palette-color(violet, 2)};
+  --palette-color__violet--3: #{palette-color(violet, 3)};
+  --palette-color__violet--4: #{palette-color(violet, 4)};
+  --palette-color__violet--5: #{palette-color(violet, 5)};
+  --palette-color__violet--6: #{palette-color(violet, 6)};
+  --palette-color__violet--7: #{palette-color(violet, 7)};
+  --palette-color__violet--8: #{palette-color(violet, 8)};
+  --palette-color__violet--9: #{palette-color(violet, 9)};
+  --palette-color__purple--0: #{palette-color(purple, 0)};
+  --palette-color__purple--1: #{palette-color(purple, 1)};
+  --palette-color__purple--2: #{palette-color(purple, 2)};
+  --palette-color__purple--3: #{palette-color(purple, 3)};
+  --palette-color__purple--4: #{palette-color(purple, 4)};
+  --palette-color__purple--5: #{palette-color(purple, 5)};
+  --palette-color__purple--6: #{palette-color(purple, 6)};
+  --palette-color__purple--7: #{palette-color(purple, 7)};
+  --palette-color__purple--8: #{palette-color(purple, 8)};
+  --palette-color__purple--9: #{palette-color(purple, 9)};
+  --palette-color__fuchsia--0: #{palette-color(fuchsia, 0)};
+  --palette-color__fuchsia--1: #{palette-color(fuchsia, 1)};
+  --palette-color__fuchsia--2: #{palette-color(fuchsia, 2)};
+  --palette-color__fuchsia--3: #{palette-color(fuchsia, 3)};
+  --palette-color__fuchsia--4: #{palette-color(fuchsia, 4)};
+  --palette-color__fuchsia--5: #{palette-color(fuchsia, 5)};
+  --palette-color__fuchsia--6: #{palette-color(fuchsia, 6)};
+  --palette-color__fuchsia--7: #{palette-color(fuchsia, 7)};
+  --palette-color__fuchsia--8: #{palette-color(fuchsia, 8)};
+  --palette-color__fuchsia--9: #{palette-color(fuchsia, 9)};
+  --palette-color__pink--0: #{palette-color(pink, 0)};
+  --palette-color__pink--1: #{palette-color(pink, 1)};
+  --palette-color__pink--2: #{palette-color(pink, 2)};
+  --palette-color__pink--3: #{palette-color(pink, 3)};
+  --palette-color__pink--4: #{palette-color(pink, 4)};
+  --palette-color__pink--5: #{palette-color(pink, 5)};
+  --palette-color__pink--6: #{palette-color(pink, 6)};
+  --palette-color__pink--7: #{palette-color(pink, 7)};
+  --palette-color__pink--8: #{palette-color(pink, 8)};
+  --palette-color__pink--9: #{palette-color(pink, 9)};
+  --palette-color__rose--0: #{palette-color(rose, 0)};
+  --palette-color__rose--1: #{palette-color(rose, 1)};
+  --palette-color__rose--2: #{palette-color(rose, 2)};
+  --palette-color__rose--3: #{palette-color(rose, 3)};
+  --palette-color__rose--4: #{palette-color(rose, 4)};
+  --palette-color__rose--5: #{palette-color(rose, 5)};
+  --palette-color__rose--6: #{palette-color(rose, 6)};
+  --palette-color__rose--7: #{palette-color(rose, 7)};
+  --palette-color__rose--8: #{palette-color(rose, 8)};
+  --palette-color__rose--9: #{palette-color(rose, 9)};
+  // UI color
+  --ui-color__error: #{ui-color(error)};
+  --ui-color__warning: #{ui-color(warning)};
+  --ui-color__notice: #{ui-color(notice)};
+  --ui-color__success: #{ui-color(success)};
+  --ui-color__negative: #{ui-color(negative)};
+  // brands color
+  --brands-color__facebook: #{brands-color(facebook)};
+  --brands-color__twitter: #{brands-color(twitter)};
+  --brands-color__tumblr: #{brands-color(tumblr)};
+  --brands-color__line: #{brands-color(line)};
+  --brands-color__hatena: #{brands-color(hatena)};
+  --brands-color__youtube: #{brands-color(youtube)};
+  --brands-color__pinterest: #{brands-color(pinterest)};
+  --brands-color__pocket: #{brands-color(pocket)};
+  --brands-color__linkedin: #{brands-color(linkedin)};
+  --brands-color__feedly: #{brands-color(feedly)};
+  // easing function
+  --easing-function__linear: #{map-get($easing-function-list, linear)};
+  --easing-function__ease: #{map-get($easing-function-list, ease)};
+  --easing-function__ease-in: #{map-get($easing-function-list, ease-in)};
+  --easing-function__ease-out: #{map-get($easing-function-list, ease-out)};
+  --easing-function__ease-inout: #{map-get($easing-function-list, ease-inout)};
+  --easing-function__ease-in-sine: #{map-get($easing-function-list, ease-in-sine)};
+  --easing-function__ease-out-sine: #{map-get($easing-function-list, ease-out-sine)};
+  --easing-function__ease-inout-sine: #{map-get($easing-function-list, ease-inout-sine)};
+  --easing-function__ease-in-quad: #{map-get($easing-function-list, ease-in-quad)};
+  --easing-function__ease-out-quad: #{map-get($easing-function-list, ease-out-quad)};
+  --easing-function__ease-inout-quad: #{map-get($easing-function-list, ease-inout-quad)};
+  --easing-function__ease-in-cubic: #{map-get($easing-function-list, ease-in-cubic)};
+  --easing-function__ease-out-cubic: #{map-get($easing-function-list, ease-out-cubic)};
+  --easing-function__ease-inout-cubic: #{map-get($easing-function-list, ease-inout-cubic)};
+  --easing-function__ease-in-quart: #{map-get($easing-function-list, ease-in-quart)};
+  --easing-function__ease-out-quart: #{map-get($easing-function-list, ease-out-quart)};
+  --easing-function__ease-inout-quart: #{map-get($easing-function-list, ease-inout-quart)};
+  --easing-function__ease-in-quint: #{map-get($easing-function-list, ease-in-quint)};
+  --easing-function__ease-out-quint: #{map-get($easing-function-list, ease-out-quint)};
+  --easing-function__ease-inout-quint: #{map-get($easing-function-list, ease-inout-quint)};
+  --easing-function__ease-in-expo: #{map-get($easing-function-list, ease-in-expo)};
+  --easing-function__ease-out-expo: #{map-get($easing-function-list, ease-out-expo)};
+  --easing-function__ease-inout-expo: #{map-get($easing-function-list, ease-inout-expo)};
+  --easing-function__ease-in-circ: #{map-get($easing-function-list, ease-in-circ)};
+  --easing-function__ease-out-circ: #{map-get($easing-function-list, ease-out-circ)};
+  --easing-function__ease-inout-circ: #{map-get($easing-function-list, ease-inout-circ)};
+  --easing-function__ease-in-back: #{map-get($easing-function-list, ease-in-back)};
+  --easing-function__ease-out-back: #{map-get($easing-function-list, ease-out-back)};
+  --easing-function__ease-inout-back: #{map-get($easing-function-list, ease-inout-back)};
+  // dark theme mode 
+  &[data-theme="dark"] {
+    --default-color: #{$color-white}; 
+    --base-color__1: #{base-color(7)};
+    --base-color__2: #{base-color(6)};
+    --base-color__3: #{base-color(5)};
+    --base-color__4: #{base-color(4)};
+    --base-color__5: #{base-color(3)};
+    --base-color__6: #{base-color(2)};
+    --base-color__7: #{base-color(1)};
+    --primary-color__1: #{primary-color(7)};
+    --primary-color__2: #{primary-color(6)};
+    --primary-color__3: #{primary-color(5)};
+    --primary-color__4: #{primary-color(4)};
+    --primary-color__5: #{primary-color(3)};
+    --primary-color__6: #{primary-color(2)};
+    --primary-color__7: #{primary-color(1)};
+    --secondary-color__1: #{secondary-color(7)};
+    --secondary-color__2: #{secondary-color(6)};
+    --secondary-color__3: #{secondary-color(5)};
+    --secondary-color__4: #{secondary-color(4)};
+    --secondary-color__5: #{secondary-color(3)};
+    --secondary-color__6: #{secondary-color(2)};
+    --secondary-color__7: #{secondary-color(1)};
+    --accent-color__1: #{accent-color(7)};
+    --accent-color__2: #{accent-color(6)};
+    --accent-color__3: #{accent-color(5)};
+    --accent-color__4: #{accent-color(4)};
+    --accent-color__5: #{accent-color(3)};
+    --accent-color__6: #{accent-color(2)};
+    --accent-color__7: #{accent-color(1)};
+  }
+}
+// container width
+:root {
+  --container-width: calc(var(--screen-xl) * 1px);
+}
+@include media-query(2xl) {
+  :root {
+    --container-width: calc(var(--screen-xl) * 1px);
+  }
+}
+@include media-query(xl) {
+  :root {
+    --container-width: calc(var(--screen-lg) * 1px);
+  }
+}
+@include media-query(lg) {
+  :root {
+    --container-width: calc(var(--screen-md) * 1px);
+  }
+}
+@include media-query(md) {
+  :root {
+    --container-width: 100%;
+  }
+}
