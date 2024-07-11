@@ -17,6 +17,8 @@ Startify5で主にできることは以下になります。
 - Vue.js（Piniaプラグイン対応）・React・jQuery・TailwindCSSの各種ライブラリ
 - ソースコードのminify対応
 - 開発用ローカルサーバーの起動と自動リロード
+- Markdownファイルでのコンテンツ管理と動的ルーティング【NEW】
+- ビルドHTMLファイル内の相対パス置換【NEW】
 
 ## Requirement
 
@@ -66,6 +68,12 @@ $ npm run lint
 
 ```bash
 $ npm run format
+```
+
+#### 7. ビルドHTMLファイル内の相対パス置換
+
+```bash
+$ npm run path
 ```
 
 ## Note
