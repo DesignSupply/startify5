@@ -13,8 +13,7 @@ type frontmatterType = {
 };
 
 export async function getStaticPaths() {
-  const postData: MarkdownInstance<frontmatterType>[] =
-    await Astro.glob<frontmatterType>('../../../content/posts/*.md');
+  const postData: MarkdownInstance<frontmatterType>[] = await Astro.glob<frontmatterType>('@/content/posts/*.md');
   return postData.map((post) => ({ params: { id: Number(post.frontmatter.id) } }));
 }
 

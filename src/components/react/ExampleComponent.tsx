@@ -1,4 +1,4 @@
-import { useSomeContext } from './AppReact';
+import { useSomeContext } from '@/components/react/AppReact';
 
 type propsType = {
   message: string;
