@@ -9,7 +9,7 @@ const pageId = 'example',
       '@type': 'ListItem',
       position: 1,
       item: {
-        '@id': 'https://example.com/',
+        '@id': `${import.meta.env.PUBLIC_ENVURL}`,
         name: 'HOME'
       }
     },
@@ -17,8 +17,8 @@ const pageId = 'example',
       '@type': 'ListItem',
       position: 2,
       item: {
-        '@id': 'https://example.com/example.html',
-        name: 'サンプルページ'
+        '@id': `${import.meta.env.PUBLIC_ENVURL}${pageMeta.path}`,
+        name: `${pageMeta.title}`
       }
     }
   ];
@@ -34,6 +34,6 @@ const pageId = 'example',
   ldJSON={ldJSON}
 >
   <main class="l-main p-page">
-    <h1>サンプルページ</h1>
+    <h1>{pageMeta.title}</h1>
   </main>
 </Layout>
