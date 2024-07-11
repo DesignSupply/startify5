@@ -27,9 +27,19 @@ const pageId = 'home',
   ldJSON={ldJSON}
 >
   <main class="l-main p-front-page p-page">
-    <h1>startify5</h1>
-    <AppReact client:load />
-    <div id="vue_app"></div>
+    <article>
+      <section class="l-wrapper">
+        <div class="l-container">
+          <div class="l-inner">
+            <div class="__block-1">
+              <h2>トップページ</h2>
+              <AppReact client:load />
+              <div id="vue_app"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
   </main>
 </Layout>
 

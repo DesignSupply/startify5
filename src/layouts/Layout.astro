@@ -71,7 +71,7 @@ const siteData: siteDataType = {
   <body>
     <noscript>※当ウェブサイトを快適に閲覧して頂くためjavascriptを有効にしてください</noscript>
     <div class="l-base">
-      <Header />
+      <Header currentPage={siteData.pageName} />
       <slot />
       <Footer />
     </div>

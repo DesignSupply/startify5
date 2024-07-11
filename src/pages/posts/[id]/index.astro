@@ -59,11 +59,19 @@ const pageId = currentPost.slug,
   path={pageMeta.path}
   ldJSON={ldJSON}
 >
-  <main class="l-main p-page">
-    <h1>{currentPost.data.title}</h1>
+  <main class="l-main p-page-single">
     <article>
-      <Content />
+      <section class="l-wrapper">
+        <div class="l-container">
+          <div class="l-inner">
+            <div class="__block-1">
+              <h1>{currentPost.data.title}</h1>
+              <Content />
+              <a href="/posts/">投稿一覧に戻る</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </article>
-    <a href="/posts/">投稿一覧に戻る</a>
   </main>
 </Layout>
