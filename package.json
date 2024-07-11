@@ -14,7 +14,8 @@
     "lint:style": "stylelint 'src/**/*.{css,scss,astro,vue}'",
     "lint:es": "eslint 'src/**/*.{astro,tsx,ts,vue}'",
     "lint:html": "markuplint 'src/**/*.{html,astro,tsx,vue}'",
-    "format": "prettier --ignore-path .prettierignore --write ."
+    "format": "prettier --ignore-path .prettierignore --write .",
+    "path": "node relativePath.mjs"
   },
   "repository": {
     "type": "git",
