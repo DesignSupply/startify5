@@ -4,7 +4,7 @@ import siteData from '../../../siteData.mjs';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
-type postDataType = CollectionEntry<'posts'>
+type postDataType = CollectionEntry<'posts'>;
 
 const posts: postDataType[] = await getCollection('posts');
 const pageId = 'posts',
@@ -41,11 +41,11 @@ const pageId = 'posts',
   <main class="l-main p-page">
     <h1>投稿一覧</h1>
     {
-      posts.map((post: postDataType) => 
+      posts.map((post: postDataType) => (
         <li>
           <a href={`/posts/${post.data.id}`}>{post.data.title}</a>
         </li>
-      )
+      ))
     }
   </main>
 </Layout>

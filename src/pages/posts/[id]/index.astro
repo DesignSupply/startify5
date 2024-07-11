@@ -10,18 +10,17 @@ type frontmatterType = {
   ogpImage?: string;
   type?: string;
   path?: string;
-}
+};
 
 export async function getStaticPaths() {
-  const postData: MarkdownInstance<frontmatterType>[] = await Astro.glob<frontmatterType>('../../../content/posts/*.md')
-  return postData.map((post) => (
-    { params: { id: Number(post.frontmatter.id) }}
-  ));
-};
+  const postData: MarkdownInstance<frontmatterType>[] =
+    await Astro.glob<frontmatterType>('../../../content/posts/*.md');
+  return postData.map((post) => ({ params: { id: Number(post.frontmatter.id) } }));
+}
 
 const { id } = Astro.params;
 const currentPost = await getEntry('posts', `post-${id}`);
-const { Content } = await currentPost.render()
+const { Content } = await currentPost.render();
 const pageId = currentPost.slug,
   pageMeta = currentPost.data,
   ldJSON = [
@@ -48,7 +47,7 @@ const pageId = currentPost.slug,
         '@id': `https://example.com/posts/${id}`,
         name: `${pageMeta.title}`
       }
-    },
+    }
   ];
 ---
 
