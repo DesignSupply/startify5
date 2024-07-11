@@ -53,5 +53,12 @@ export default defineConfig({
     }),
     vue({}),
     sitemap()
-  ]
+  ],
+  markdown: {
+    syntaxHighlight: 'shiki',
+    gfm: false,
+    remarkPlugins: [],
+    rehypePlugins: [],
+    remarkRehype: {}
+  }
 });

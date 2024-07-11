@@ -12,5 +12,12 @@ export default {
     ogpImage: '/assets/images/ogp_default.png',
     type: 'article',
     path: '/example.html'
+  },
+  posts: {
+    title: '投稿一覧',
+    description: '投稿一覧の説明文です',
+    ogpImage: '/assets/images/ogp_default.png',
+    type: 'article',
+    path: '/posts'
   }
 };

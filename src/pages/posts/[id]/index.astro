@@ -1,0 +1,71 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+import type { MarkdownInstance } from 'astro';
+
+type frontmatterType = {
+  id: number;
+  title: string;
+  description?: string;
+  ogpImage?: string;
+  type?: string;
+  path?: string;
+}
+
+export async function getStaticPaths() {
+  const postData: MarkdownInstance<frontmatterType>[] = await Astro.glob<frontmatterType>('../../../content/posts/*.md')
+  return postData.map((post) => (
+    { params: { id: Number(post.frontmatter.id) }}
+  ));
+};
+
+const { id } = Astro.params;
+const currentPost = await getEntry('posts', `post-${id}`);
+const { Content } = await currentPost.render()
+const pageId = currentPost.slug,
+  pageMeta = currentPost.data,
+  ldJSON = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@id': 'https://example.com/',
+        name: 'HOME'
+      }
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@id': 'https://example.com/posts/',
+        name: '投稿一覧'
+      }
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      item: {
+        '@id': `https://example.com/posts/${id}`,
+        name: `${pageMeta.title}`
+      }
+    },
+  ];
+---
+
+<Layout
+  pageName={pageId}
+  title={pageMeta.title}
+  description={pageMeta.description}
+  ogpImage={pageMeta.ogpImage}
+  type={pageMeta.type}
+  path={pageMeta.path}
+  ldJSON={ldJSON}
+>
+  <main class="l-main p-page">
+    <h1>{currentPost.data.title}</h1>
+    <article>
+      <Content />
+    </article>
+    <a href="/posts/">投稿一覧に戻る</a>
+  </main>
+</Layout>
