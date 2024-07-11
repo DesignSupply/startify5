@@ -40,10 +40,6 @@ async function replaceRelativePath() {
         .replace(/src="\/(.*?)"/g, `src="${depth}$1"`)
         .replace(/srcset="\/(.*?)"/g, `srcset="${depth}$1"`);
       await fs.writeFile(fullPath, modifiedContent, 'utf8');
-      // console.log({fullPath});
-      // console.log({relativePath});
-      // console.log({depth});
-      // console.log(`Content of ${file}:`, content);
     }
   } catch (error) {
     console.log(error);
@@ -51,14 +47,3 @@ async function replaceRelativePath() {
 }
 
 replaceRelativePath();
-
-// getHtmlFiles(directoryPath)
-//   .then(files => {
-//     console.log('HTML files in "dist" directory and subdirectories:', files);
-//     files.forEach((filePath) => {
-//       replaceRelativePath(filePath)
-//     })
-//   })
-//   .catch(err => {
-//     console.error('Error reading directory:', err);
-//   });
